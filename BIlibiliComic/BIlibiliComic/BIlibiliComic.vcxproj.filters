@@ -51,9 +51,15 @@
     <ClCompile Include="zip\zip.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="WorkThread.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="BIlibiliComic.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="WorkThread.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
