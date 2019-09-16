@@ -176,18 +176,21 @@ QByteArray WorkThread::getIndexDataFromWeb(QString qstrEpID)
 	//request.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("application/x-www-form-urlencoded"));
 	request.setHeader(QNetworkRequest::ContentTypeHeader, QVariant("application/json"));
 
-	QList<QNetworkCookie> cookies;//= mManager->cookieJar()->cookiesForUrl(mUrl);
-	QStringList cookieList = m_workInfo.m_Cookie.split(";");
-	for (int i = 0;i < cookieList.size();++i)
+	if (!m_workInfo.m_Cookie.isEmpty())
 	{
-		QStringList cookie = cookieList[i].split("=");
-		cookies.push_back(QNetworkCookie(cookie[0].toUtf8(), cookie[1].toUtf8()));
+		QList<QNetworkCookie> cookies;//= mManager->cookieJar()->cookiesForUrl(mUrl);
+		QStringList cookieList = m_workInfo.m_Cookie.split(";");
+		for (int i = 0;i < cookieList.size();++i)
+		{
+			QStringList cookie = cookieList[i].split("=");
+			cookies.push_back(QNetworkCookie(cookie[0].toUtf8(), cookie[1].toUtf8()));
+		}
+
+		QVariant var;
+		var.setValue(cookies);
+
+		request.setHeader(QNetworkRequest::CookieHeader, var);
 	}
-
-	QVariant var;
-	var.setValue(cookies);
-
-	request.setHeader(QNetworkRequest::CookieHeader, var);
 
 	//QPointer<QNetworkAccessManager> naManager = new QNetworkAccessManager();
 
