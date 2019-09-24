@@ -1,6 +1,9 @@
 # Prerequisites
 *.d
 
+*.cpp linguist-language=c++
+*.h linguist-language=c++
+
 # Compiled Object files
 *.slo
 *.lo
