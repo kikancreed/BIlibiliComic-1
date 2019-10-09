@@ -237,7 +237,7 @@ QByteArray WorkThread::getIndexDataFromWeb(QString qstrEpID)
 	return array;
 }
 
-//现在获得index.dat,不从网络获取，而是从基于安卓下载的的缓存中读取。
+//现在获得index.dat,直接从网络获取。
 void WorkThread::getIndexDataToken(QString qstrEpID)
 {
 	QByteArray array;

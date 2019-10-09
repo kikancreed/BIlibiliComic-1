@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'BIlibiliComic.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.3)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,15 +12,17 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'BIlibiliComic.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.7.1. It"
+#error "This file was generated using the moc from 5.9.3. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
 
 QT_BEGIN_MOC_NAMESPACE
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_BIlibiliComic_t {
-    QByteArrayData data[8];
-    char stringdata0[102];
+    QByteArrayData data[4];
+    char stringdata0[39];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,18 +32,12 @@ struct qt_meta_stringdata_BIlibiliComic_t {
 static const qt_meta_stringdata_BIlibiliComic_t qt_meta_stringdata_BIlibiliComic = {
     {
 QT_MOC_LITERAL(0, 0, 13), // "BIlibiliComic"
-QT_MOC_LITERAL(1, 14, 16), // "onDetailFinished"
-QT_MOC_LITERAL(2, 31, 0), // ""
-QT_MOC_LITERAL(3, 32, 15), // "onTokenFinished"
-QT_MOC_LITERAL(4, 48, 21), // "requestDetailFinished"
-QT_MOC_LITERAL(5, 70, 14), // "QNetworkReply*"
-QT_MOC_LITERAL(6, 85, 5), // "reply"
-QT_MOC_LITERAL(7, 91, 10) // "parsePerEP"
+QT_MOC_LITERAL(1, 14, 14), // "selectSavePath"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 8) // "starWork"
 
     },
-    "BIlibiliComic\0onDetailFinished\0\0"
-    "onTokenFinished\0requestDetailFinished\0"
-    "QNetworkReply*\0reply\0parsePerEP"
+    "BIlibiliComic\0selectSavePath\0\0starWork"
 };
 #undef QT_MOC_LITERAL
 
@@ -51,27 +47,19 @@ static const uint qt_meta_data_BIlibiliComic[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
-
- // signals: name, argc, parameters, tag, flags
-       1,    0,   34,    2, 0x06 /* Public */,
-       3,    0,   35,    2, 0x06 /* Public */,
+       0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       4,    1,   36,    2, 0x0a /* Public */,
-       7,    0,   39,    2, 0x0a /* Public */,
-
- // signals: parameters
-    QMetaType::Void,
-    QMetaType::Void,
+       1,    0,   24,    2, 0x0a /* Public */,
+       3,    0,   25,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void, 0x80000000 | 5,    6,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -83,46 +71,17 @@ void BIlibiliComic::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         BIlibiliComic *_t = static_cast<BIlibiliComic *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->onDetailFinished(); break;
-        case 1: _t->onTokenFinished(); break;
-        case 2: _t->requestDetailFinished((*reinterpret_cast< QNetworkReply*(*)>(_a[1]))); break;
-        case 3: _t->parsePerEP(); break;
+        case 0: _t->selectSavePath(); break;
+        case 1: _t->starWork(); break;
         default: ;
         }
-    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        switch (_id) {
-        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-        case 2:
-            switch (*reinterpret_cast<int*>(_a[1])) {
-            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
-            case 0:
-                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QNetworkReply* >(); break;
-            }
-            break;
-        }
-    } else if (_c == QMetaObject::IndexOfMethod) {
-        int *result = reinterpret_cast<int *>(_a[0]);
-        void **func = reinterpret_cast<void **>(_a[1]);
-        {
-            typedef void (BIlibiliComic::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BIlibiliComic::onDetailFinished)) {
-                *result = 0;
-                return;
-            }
-        }
-        {
-            typedef void (BIlibiliComic::*_t)();
-            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&BIlibiliComic::onTokenFinished)) {
-                *result = 1;
-                return;
-            }
-        }
     }
+    Q_UNUSED(_a);
 }
 
 const QMetaObject BIlibiliComic::staticMetaObject = {
     { &QMainWindow::staticMetaObject, qt_meta_stringdata_BIlibiliComic.data,
-      qt_meta_data_BIlibiliComic,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_BIlibiliComic,  qt_static_metacall, nullptr, nullptr}
 };
 
 
@@ -133,9 +92,9 @@ const QMetaObject *BIlibiliComic::metaObject() const
 
 void *BIlibiliComic::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
+    if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_BIlibiliComic.stringdata0))
-        return static_cast<void*>(const_cast< BIlibiliComic*>(this));
+        return static_cast<void*>(this);
     return QMainWindow::qt_metacast(_clname);
 }
 
@@ -145,26 +104,15 @@ int BIlibiliComic::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
-            qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        if (_id < 2)
+            *reinterpret_cast<int*>(_a[0]) = -1;
+        _id -= 2;
     }
     return _id;
 }
-
-// SIGNAL 0
-void BIlibiliComic::onDetailFinished()
-{
-    QMetaObject::activate(this, &staticMetaObject, 0, Q_NULLPTR);
-}
-
-// SIGNAL 1
-void BIlibiliComic::onTokenFinished()
-{
-    QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
-}
+QT_WARNING_POP
 QT_END_MOC_NAMESPACE
